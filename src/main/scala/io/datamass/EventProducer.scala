@@ -25,7 +25,8 @@ object EventProducer extends App {
       .map(_.toString)
       .map(value => {
         println(s"Message sent to topic $value")
-        new ProducerRecord[String, String]("jwszol-test", value)
+        //TODO: change topic name
+        new ProducerRecord[String, String]("CHANGE_ME", value)
       })
       .runWith(Producer.plainSink(producerSettings))
 }

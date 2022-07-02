@@ -23,8 +23,8 @@ object EventConsumer extends App{
       .withProperty(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest")
 
 
-  // our topic to subscribe to for messages
-  val topic = "jwszol-test"
+  // TODO: our topic to subscribe to for messages
+  val topic = "CHANGE_ME"
 
   // listen to our topic with our settings, until the program is exited
   Consumer.plainSource(consumerSettings, Subscriptions.topics(topic))
